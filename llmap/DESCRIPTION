@@ -1,0 +1,10 @@
+Package: llmap
+Title: Create HTML maps using leaflet
+Version: 0.0.1
+Authors@R: person("Thomas", "Finnie", , "Thomas.Finnie@phe.gov.uk", role = c("aut", "cre"))
+Description: Simplifies the creation of "slippy" HTML + Javascript maps using leaflet. This
+ package follows the underlying Leaflet Javascript library as much as possible and exposes it
+ in a language of graphics style like ggplot2
+Depends: R (>= 3.1.2)
+License: GPL2
+LazyData: true
