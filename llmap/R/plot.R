@@ -10,11 +10,8 @@ htmlPrintTemplate <- function(){
 			%body%
 			<script>
 			%script%
-	
-	L.tileLayer('http://{s}.tiles.mapbox.com/v3/twomagpi.l6a9obo9/{z}/{x}/{y}.png', {
-				attribution: 'Map data &copy; <a href=\"http://openstreetmap.org\">OpenStreetMap</a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"http://mapbox.com\">Mapbox</a>',
-				maxZoom: 18
-			}).addTo(map);
+	L.tileLayer('https://{s}.tiles.mapbox.com/v4/twomagpi.l6a9obo9/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoidHdvbWFncGkiLCJhIjoidTZOeVY3QSJ9.rKKjDjPUISMUb5xGQjhf9A').addTo(map);
+
 			</script>
 			</body>
 			</html>
