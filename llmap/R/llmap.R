@@ -1,4 +1,4 @@
-#' The base class for Rleaflet2
+#' The base class for llmap
 #' 
 #' This contains the base class. The base class creates and maintains the basic
 #' material to create a leaflet map page.
@@ -7,17 +7,16 @@
 #' @export
 llmap <- function(...) UseMethod("llmap")
 
-#' Reports whether x is a ggplot object
+#' Reports whether x is a llmap object
 #' @param x An object to test
 #' @export
 is.llmap <- function(x) inherits(x, "llmap")
 
 
-#' Create a new ggplot plot from a data frame
+#' Create a new llmap canvas 
 #'
-#' @param data default data frame for plot
 #' @export
-llmap.default <- function(...) {
+llmap.default <- function(name, css, ...) {
 	result <- structure(list(
 				style = c(
 					'#map { height: 180px; }'
@@ -31,7 +30,7 @@ llmap.default <- function(...) {
 				),
 				script = c(
 					 'var map = L.map(\'map\').setView([51.505, -0.09], 13);'
-			)), class = c("llmap", "llmapBase")
+			)), class = c("llmap", "canvas")
 	)
 	return(result)
 }
